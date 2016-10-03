@@ -68,7 +68,23 @@ Poof! Gone. Now, if we want to copy it in the exact same location from GitHub, w
 $ git clone https://github.com/bstiber/Hello_world
 ```
 Now, an ls shows us our directory is there with our code file in it. Let's go into the project directory:
+
 ```ruby
 $ cd hello-world
 ```
+
 If we do a git log, we see that our commit history arrived with our directory and code.
+
+If we run git remote -v, we also see that our newly created local .git repository is automatically linked - with the nickname origin - to the remote repository from which we cloned.
+
+```ruby
+$ git remote -v
+origin	https://github.com/bstiber/Hello_world (fetch)
+origin	https://github.com/bstiber/Hello_world (push)
+```
+If we make changes to the code and want to push again, we would be able to use the origin nickname that came with the repository from GitHub (e.g. git push origin master).
+
+Note: only one location can be designated with the nickname "origin". So, if we clone one project but want to push to two different repositories, they cannot both be nicknamed "origin". That is another good reason to use your initials as the nickname of the remote repository.
+
+Whew! This has been a mountain of Git concepts and terminology to explore. Don't try and memorize this information. Use the cheat sheets for reference to walk through set up and usage in your projects to come. Before you know it, it'll become ingrained in your daily workflow.
+Be sure that you are not cloning a project inside of an existing local repository. In other words, you should not be inside of a project directory when you run the git clone command. Otherwise you'll end up with one git repository inside of another.
