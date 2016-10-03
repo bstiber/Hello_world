@@ -53,3 +53,22 @@ To push our code, which means we are copying it from the local to the remote, we
 ```ruby
 $ git push bs master
 ```
+
+#Cloning from GitHub
+So, how do we get our code back to our local from the remote? What if we push our code up to GitHub at Epicodus and want to work on it at home on our personal devices? To do this, we'll need to clone our GitHub repository on our local machines.
+To practice this, let's delete our hello-world project directory and clone it again from GitHub. To delete a whole directory, we can't be in it so we'll go up a directory level and then remove it:
+
+```ruby
+$ cd ..
+$ rm -rf hello-world
+```
+Poof! Gone. Now, if we want to copy it in the exact same location from GitHub, we get the URL for the remote repository and run:
+
+```ruby
+$ git clone https://github.com/bstiber/Hello_world
+```
+Now, an ls shows us our directory is there with our code file in it. Let's go into the project directory:
+```ruby
+$ cd hello-world
+```
+If we do a git log, we see that our commit history arrived with our directory and code.
